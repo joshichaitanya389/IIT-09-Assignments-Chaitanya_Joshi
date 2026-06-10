@@ -1,0 +1,27 @@
+1.Why should root SSH login be disabled?
+
+ANS:- By enabling root SSH login we are showing username and password to world of internet. So by enabling attacker can guess our uname and password easily. By disabling it attacker cannot attack as our uname will be alike in world but for password it will hard for attacker to guess it. So to secure your system SSH login must be disabled.
+
+2.What is a service in Linux?
+
+ANS: Linux Services are simply programs that are running in the background to provide system functionality and also to to respond to network requests.
+
+3.Difference between start and enable
+
+ANS:- When we start any service it will start in current session and when we enable any service it will start every time when system gets boot.
+
+4.What happens if permissions are set to 777 ?
+
+ANS:- When permissions are set to 777 we are giving all rights i.e. read, write and execute to all i.e. to user, owner and groups.
+
+5.How does permission help in securing data?
+
+ANS:- When we give permission read , write and execute it is giving permissions to user, owner and groups. So giving permissions them means we have to give permissions in hierarchy. So it will limit the exposure. Second it will limit external threat and internal threat to system. Third it will protect data privacy. In management while giving permissions they are given in hierarchy so in management everyone cannot has same permissions. It will protect management's data.
+
+6.What does x field?
+
+ANS:- x field means execute i.e. it is giving permission to user, owner and groups to execute files, directories etc. in system.
+
+7.Why are passwords not stored in /etc/passwd ?
+
+ANS:- Passwords are not stored in /etc/passwd to protect unauthorized access.
