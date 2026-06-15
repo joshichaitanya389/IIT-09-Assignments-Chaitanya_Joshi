@@ -1,0 +1,38 @@
+1. What is IDS?
+
+ANS: ISD is security tool that monitor network traffic or system activity to detect unauthorized access or suspicious activity and it also generates alert.
+
+2. Difference between IDS and IPS
+
+ANS: 1)IDS only detects the attack but IPS detects and block the attack same time. 2)IDS passively monitor network traffic but IPS actively monitor network traffic and protect the system. 3) IDS by monitoring network traffic only generates the alert but IPS by monitoring network traffic not only generates the alert but blocks the attack simultaneously. 4) IDS does not block malicious traffic but IPS does block the malicious traffic. 
+
+3. What is Snort?
+
+ANS: Snort is an open source Network Intrusion and Prevention detection system. It monitors the network traffic, scans data packets by predefined rules to detect alert, alert pr block malicious activity such as cyberattack. It is developed by CISCO. 
+
+4. What is port scanning?
+
+ANS: Port scanning is process of device to find which communication ports and listening the traffics. Port can be open i.e. device detects its request acknowledge its request and listen traffic on that particular port, second it can be closed i.e. is detects request and respond but no services is running on that port or no application is not running on that port, third filtered or blocked means no response from targeted device due device is drooping the packets due to security rule.
+
+5. What is Nmap used for?
+
+ANS: Nmap is open-source utility used by security professionals to discover network and security audit. it scans IP addresses to map networks, identify live host, detects open ports, running services, operating system and potential vulnerabilities.
+
+6. What is HOME_NET?
+
+ANS: It is configurations variable used for IDS and IPS to protect internal network. We have to give particular IP address using HOME_NET variable to protect it from vulnerabilities.
+
+7. What is a Snort rule?
+
+ANS: Snort rules are rules written by security professional in /etc/snort/rules/local.rules. These rules are mainly that defines what traffic to watch and respond to it.
+
+8. What is SID in Snort?
+
+ANS: SID is Signature ID or Standard ID written is Snort Rule. It is unique numerical value given to each rule in IDS or IPS. It must contain 7 digits.
+
+alert tcp any any -> $HOME_NET any (msg:"TCP Port Scan Detected"; flags:S;
+threshold: type both, track by_src, count 10, seconds 5; sid:1000002; rev:1;)
+
+ANS: it will give alert using tcp protocol while source Ip and port is any. destination Ip must be $HOME_NET it is Ip address of that machine, port can be any. It will display the message "TCP Port Scan Detected", flag is S. Track by source it will track sources IP, it will count first 10 packets and will display message every 5 seconds. its SID is 10000002 i.e. unique number given to rule and its version is 1
+
+
